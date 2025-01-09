@@ -1,8 +1,10 @@
 import tensorflow as tf
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
 from tensorflow.keras import layers, models
 import tensorflow_datasets as tfds
 from utils import predict_and_print
-
 
 dataset = tfds.load('mnist', as_supervised=True)
 
